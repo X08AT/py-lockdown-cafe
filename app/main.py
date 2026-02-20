@@ -1,11 +1,13 @@
 from app.cafe import Cafe
+from typing import Any
+
 from app.errors import (
     VaccineError,
     NotWearingMaskError,
 )
 
 
-def go_to_cafe(friends: list[dict[str, any]], cafe: Cafe) -> str:
+def go_to_cafe(friends: list[dict[str, Any]], cafe: Cafe) -> str:
     mask_count = 0
     for friend in friends:
         try:
